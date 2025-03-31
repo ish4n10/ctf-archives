@@ -9,7 +9,7 @@ data = [
 ]
 
 
-def reverse_xor(data):
+def reverse_xor(data) -> list:
     decrypted = []
     rax = 1
     for i in range(len(data)):
@@ -25,6 +25,6 @@ def reverse_xor(data):
         decrypted.append(original_byte)
     return decrypted
 
-password_bytes = reverse_xor(data)
-password_str = ''.join(chr(b) for b in password_bytes)
+password_bytes: list = reverse_xor(data)
+password_str: str = ''.join(chr(b) for b in password_bytes)
 print("Decrypted Password:", password_str)
